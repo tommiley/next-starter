@@ -1,7 +1,7 @@
-const { paraglide } = require('@inlang/paraglide-next/plugin');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['lh3.googleusercontent.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -11,10 +11,5 @@ const nextConfig = {
   },
 };
 
-module.exports = paraglide({
-  paraglide: {
-    project: './project.inlang',
-    outdir: './src/paraglide',
-  },
-  ...nextConfig,
-});
+// Change from ES module export to CommonJS export
+module.exports = nextConfig;
