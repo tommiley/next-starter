@@ -1,14 +1,7 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  // Your middleware logic here
-  // For example:
-  // const response = NextResponse.next()
-  // response.headers.set('x-hello-from-middleware', 'hello')
-  // return response
-  
-  // If you don't need to modify the response, you can simply return
   return NextResponse.next();
 }
 
@@ -24,4 +17,4 @@ export const config = {
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-}
+};
