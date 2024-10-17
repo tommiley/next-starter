@@ -58,12 +58,12 @@ npm install
 
 Create `.env` file and set env variables from `.env.example` file. Recommend adding below variables to your computer environment variables so that you can use the same ones over again for prototyping.
 
-GOOGLE_CLIENT_ID
-GOOGLE_CLIENT_SECRET
-NEW_RELIC_LICENSE_KEY
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-NEXTAUTH_SECRET
-STRIPE_SECRET_KEY
+- GOOGLE_CLIENT_ID
+- GOOGLE_CLIENT_SECRET
+- NEW_RELIC_LICENSE_KEY
+- NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+- NEXTAUTH_SECRET
+- STRIPE_SECRET_KEY
 
 ### 4. Setup Database
 
