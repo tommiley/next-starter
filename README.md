@@ -27,15 +27,12 @@
 - 📈 Absolute Import & Path Alias - Import components using `@/` prefix
 - 💅 Prettier - Code formatter
 - 🧹 Eslint - Code linting tool
-- 🐶 Husky & Lint Staged - Run scripts on your staged files before they are committed
 - 🔹 Icons - From Lucide
 - 🌑 Dark mode - With next-themes
 - 📝 Commitlint - Lint your git commits
-- 🤖 Github actions - Lint your code on PR
 - ⚙️ T3-env - Manage your environment variables
 - 🗺️ Sitemap & robots.txt
 - 💯 Perfect Lighthouse score
-- 🌐 I18n with Paraglide
 
 ## 🚀 Deployment
 
@@ -45,23 +42,11 @@ Easily deploy your Next.js app with <a href="https://vercel.com/">Vercel</a> by 
 
 ## 🎯 Getting started
 
-### 1. Clone this template in one of three ways
+### 1. Setup new project
 
-1. Using this repository as template
-
-   ![use-this-template-button](https://github.com/Skolaczk/next-starter/assets/76774237/f25c9a29-41de-4865-aa38-c032b9346169)
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/Skolaczk/next-starter my-project-name
-   ```
-
-3. Using `git clone`
-
-   ```bash
-   git clone https://github.com/Skolaczk/next-starter my-project-name
-   ```
+```bash
+npx create-next-app -e https://github.com/tommiley/next-starter/tree/tmiley-slim-v1
+```
 
 ### 2. Install dependencies
 
@@ -71,14 +56,19 @@ npm install
 
 ### 3. Set up environment variables
 
-Create `.env` file and set env variables from `.env.example` file.
+Create `.env` file and set env variables from `.env.example` file. Recommend adding below variables to your computer environment variables so that you can use the same ones over again for prototyping.
 
-### 4. Prepare husky
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+NEW_RELIC_LICENSE_KEY
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+NEXTAUTH_SECRET
+STRIPE_SECRET_KEY
 
-It is required if you want husky to work
+### 4. Setup Database
 
 ```bash
-npm run prepare
+npx prisma migrate dev --name init
 ```
 
 ### 5. Run the dev server
@@ -95,8 +85,6 @@ and open http://localhost:3000/ to see this app.
 
 ```bash
 .
-├── .github                         # GitHub folder
-├── .husky                          # Husky configuration
 ├── prisma                          # Prisma schema and migrations
 ├── public                          # Public assets folder
 └── src
@@ -128,7 +116,6 @@ The following scripts are available in the `package.json`:
 - `test:watch`: Run unit tests in watch mode
 - `e2e`: Run end-to-end tests
 - `e2e:ui`: Run end-to-end tests with UI
-- `postbuild`: Generate sitemap
 
 ## 🤝 Contribution
 
